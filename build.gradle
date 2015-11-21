@@ -46,7 +46,13 @@ shadowJar {
     }
 }
 
-
+task zipAll(type: Zip) {
+    from '.'
+	baseName = 'as-device-manager'
+    include 'conf/**'
+    include '*.sh'
+    include 'build/libs/*.jar'
+}
 
 
 task wrapper(type: Wrapper) {
