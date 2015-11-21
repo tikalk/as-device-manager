@@ -30,7 +30,6 @@ public class GpsGatewayVerticle extends AbstractVerticle {
 			final JsonObject gps = ar.result().body();
 			logger.debug("Got enriched GPS. Send it to both all and specific address channels. GPS is :{}", gps);
 			vertx.eventBus().send("gps.all",gps);
-			vertx.eventBus().send("gps."+gps.getInteger("angelId"),gps);
 			req.response().end();
 		}else{
 			logger.error("Failed to enrich gps, and thus will not process it. Gps-Payload is {}",gpsPayload);
