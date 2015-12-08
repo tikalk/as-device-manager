@@ -7,19 +7,17 @@ import java.util.UUID;
 import com.cyngn.kafka.MessageProducer;
 
 import io.vertx.core.AbstractVerticle;
-import io.vertx.core.DeploymentOptions;
 import io.vertx.core.http.HttpServerRequest;
 
-public class GpsGatewayVerticle extends AbstractVerticle {
+public class HttpGpsGatewayVerticle extends AbstractVerticle {
 	private final SimpleDateFormat df = new SimpleDateFormat("yyMMddHHmmss");
 
 	private boolean createReceptionTime;
 
-	private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(GpsGatewayVerticle.class);
+	private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(HttpGpsGatewayVerticle.class);
 
 	@Override
 	public void start() {
-		vertx.deployVerticle(MessageProducer.class.getName(),new DeploymentOptions().setConfig(config()));
 		vertx.createHttpServer().requestHandler(req -> req.bodyHandler(b -> handleGps(req, b.toString()))).listen(config().getInteger("http-port"));
 		logger.info("Started HTTP Server on port {} to listen for GPS", config().getInteger("http-port"));
 	}

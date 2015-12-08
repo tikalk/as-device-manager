@@ -1,6 +1,6 @@
 {
 	"http-port" : 4080,
-	"dm-port" : 4100 ,
+	"netserver-port" : 4100 ,
 	
 	"producer":{
 		"topic":"as-raw-gps",
