@@ -75,7 +75,7 @@ task pushImage(type: DockerPushImage) {
     imageName = "$registerBaseName/$dockerBranch/$project.name"
     tag="$dockerTag"
 }
-build.dependsOn buildImage
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
