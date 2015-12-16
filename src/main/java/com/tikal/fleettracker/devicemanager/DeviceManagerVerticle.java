@@ -1,4 +1,4 @@
-package com.tikal.angelsense.devicemanager;
+package com.tikal.fleettracker.devicemanager;
 
 import com.cyngn.kafka.MessageProducer;
 

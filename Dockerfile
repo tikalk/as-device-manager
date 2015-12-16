@@ -1,9 +1,9 @@
 ###
 # vert.x docker device-manager using a Java verticle packaged as a fatjar
 # To build:
-#  docker build -t angelsense/as-device-manager .
+#  docker build -t fleettracker/as-device-manager .
 # To run:
-#   docker run -t -i -p 8080:8080 angelsense/as-device-manager
+#   docker run -t -i -p 8080:8080 fleettracker/as-device-manager
 ###
 
 FROM java:8

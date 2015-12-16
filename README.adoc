@@ -1,4 +1,4 @@
-# AngelSense Device Manager
+# FleetTracker Device Manager
 
 This micro service is responsible for accepting raw-gps lines (HTTP or Socket), and transmit them to Kafka raw-gps topic.
 It is based  on Vert.x 3
