@@ -55,7 +55,8 @@ shadowJar {
     }
 }
 
-task zipAll(type: Zip) {
+task zipAll(type: Tar) {
+    extension = 'tar.gz'
     from '.'
 	baseName = 'as-device-manager'
     include 'conf/**'

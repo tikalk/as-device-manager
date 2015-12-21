@@ -8,17 +8,11 @@
 
 FROM java:8
 
-ENV VERTICLE_FILE as-device-manager-3.1.0-fat.jar
-
-# Set the location of the verticles
-ENV VERTICLE_HOME /usr/verticles
-
-EXPOSE 8080
-
+EXPOSE 4080
 # Copy your fat jar to the container
-COPY build/libs/$VERTICLE_FILE $VERTICLE_HOME/
+ADD build/distributions/as-device-manager-3.1.0.tar.gz /as-device-manager
 
 # Launch the verticle
-WORKDIR $VERTICLE_HOME
+ENV WORKDIR /as-device-manager/run-bin
 ENTRYPOINT ["sh", "-c"]
-CMD ["java -jar $VERTICLE_FILE"]
+CMD ["cd $WORKDIR ; ./device-manager.sh"]
