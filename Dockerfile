@@ -13,6 +13,6 @@ EXPOSE 4080
 ADD build/distributions/as-device-manager-3.1.0.tar.gz /as-device-manager
 
 # Launch the verticle
-ENV WORKDIR /as-device-manager/run-bin
+ENV WORKDIR /as-device-manager
 ENTRYPOINT ["sh", "-c"]
 CMD ["cd $WORKDIR ; ./device-manager.sh"]

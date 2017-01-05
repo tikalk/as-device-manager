@@ -1,6 +1,6 @@
 package com.tikal.fleettracker.devicemanager;
 
-import com.cyngn.kafka.MessageProducer;
+import com.cyngn.kafka.produce.MessageProducer;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.DeploymentOptions;
@@ -11,7 +11,7 @@ public class DeviceManagerVerticle extends AbstractVerticle {
 
 	@Override
 	public void start() {
-		vertx.deployVerticle(MessageProducer.class.getName(),new DeploymentOptions().setConfig(config()));
+		vertx.deployVerticle(MessageProducer.class.getName(),new DeploymentOptions().setConfig(config().getJsonObject("producer")));
 		vertx.deployVerticle(new HttpGpsGatewayVerticle(),new DeploymentOptions().setConfig(config()));
 		vertx.deployVerticle(new NetServerGpsGatewayVerticle(),new DeploymentOptions().setConfig(config()));
 		

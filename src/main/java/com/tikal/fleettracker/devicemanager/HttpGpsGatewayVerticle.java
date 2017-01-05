@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-import com.cyngn.kafka.MessageProducer;
+import com.cyngn.kafka.produce.MessageProducer;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.http.HttpServerRequest;

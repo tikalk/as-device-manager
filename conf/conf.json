@@ -1,11 +1,12 @@
 {
 	"http-port" : 4080,
 	"netserver-port" : 4100 ,
-	
+
+
 	"producer":{
-		"topic":"as-raw-gps",
-		"metadata.broker.list":"localhost:9092",
-		"serializer.class":"kafka.serializer.StringEncoder",
+		"default_topic":"as-raw-gps",
+		"bootstrap.servers" : "kafka:9092" ,
+		"serializer.class":"org.apache.kafka.common.serialization.StringSerializer",
 		"producer.type" : "sync"
 	}
 }
