@@ -5,7 +5,7 @@
 
 	"producer":{
 		"default_topic":"as-raw-gps",
-		"bootstrap.servers" : "kafka:9092" ,
+		"bootstrap.servers" : "as-kafka:9092" ,
 		"serializer.class":"org.apache.kafka.common.serialization.StringSerializer",
 		"producer.type" : "sync"
 	}
