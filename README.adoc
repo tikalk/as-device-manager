@@ -10,15 +10,15 @@ From the project home folder run the following command:
 ./gradlew clean shadowJar zipAll
 
 This will create self contained zip, that you can unzip on host container. The output zip is located at
-as-device-manager/build/distributions/as-device-manager-3.1.0.zip
+ft-device-manager/build/distributions/ft-device-manager-3.1.0.zip
 
 ## How to run
 --------------
 You must run ZooKeeper and Kafka, before you run this service.
 
 
-Unzip the file as-device-manager/build/distributions/as-device-manager-3.1.0.zip
-cd to the created folder (as-device-manager-3.1.0)
+Unzip the file ft-device-manager/build/distributions/ft-device-manager-3.1.0.zip
+cd to the created folder (ft-device-manager-3.1.0)
 Run the following command : 
 ./device-manager.sh
 

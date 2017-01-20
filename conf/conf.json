@@ -4,8 +4,8 @@
 
 
 	"producer":{
-		"default_topic":"as-raw-gps",
-		"bootstrap.servers" : "as-kafka:9092" ,
+		"default_topic":"ft-raw-gps",
+		"bootstrap.servers" : "ft-kafka:9092" ,
 		"serializer.class":"org.apache.kafka.common.serialization.StringSerializer",
 		"producer.type" : "sync"
 	}
